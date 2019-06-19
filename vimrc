@@ -565,6 +565,8 @@ nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
+"新开窗口查看函数定义 todo
+"nnoremap <leader>d :Ctrl-W-{<CR>
 "==========================================
 " FileType Settings  文件类型设置
 "==========================================
