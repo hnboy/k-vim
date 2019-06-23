@@ -1,0 +1,3 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/ericluo/Documents/workstation/PY/40HG/C_P25Q40HG_CP1_V01_02_03_CP1'
