@@ -1,10 +1,6 @@
 "==========================================
 " Author:  wklken
 " Version: 9.1
-" Email: wklken@yeah.net
-" BlogPost: http://www.wklken.me
-" ReadMe: README.md
-" Donation: http://www.wklken.me/pages/donation.html
 " Last_modify: 2015-12-15
 " Sections:
 "       -> Initial Plugin 加载插件
@@ -405,7 +401,7 @@ function! s:ZoomToggle() abort
     endif
 endfunction
 command! ZoomToggle call s:ZoomToggle()
-nnoremap <silent> <Leader>z :ZoomToggle<CR>
+nnoremap <silent> <leader>z :ZoomToggle<CR>
 
 
 " Go to home and end using capitalized directions
@@ -567,6 +563,9 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 
 "新开窗口查看函数定义 todo
 "nnoremap <leader>d :Ctrl-W-{<CR>
+" go to defein
+nnoremap <leader>d gD
+nnoremap <leader>b <C-O>
 "==========================================
 " FileType Settings  文件类型设置
 "==========================================
