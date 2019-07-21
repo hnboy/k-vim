@@ -598,31 +598,33 @@ function! AutoSetFileHead()
     "如果文件类型为.sh文件
     if &filetype == 'sh'
         call setline(1, "\#!/bin/bash")
+        normal G
+        normal o
     endif
     "define the cpp type header
     if &filetype == 'cpp'
         call setline(1, "\#include<iostream>")
-        call setline(2, "\using namespace std;")
-        call setline(3, "\int main() {")
-        call setline(4, " ")
-        call setline(5, "\}")
+        call append(line("."), "\int main() {")
+        call append(line(".")+1, "}")
+        normal j
+        normal o
     endif
     if &filetype == 'c'
         call setline(1, "\#include<stdio>")
-        call setline(2, "\int main() {")
-        call setline(3, " ")
-        call setline(4, "\}")
+        call append(line("."), "\int main() {")
+        call append(line(".")+1, "}")
+        normal j
+        normal o
     endif
     "如果文件类型为python
     if &filetype == 'python'
         " call setline(1, "\#!/usr/bin/env python")
         " call append(1, "\# encoding: utf-8")
         call setline(1, "\# -*- coding: utf-8 -*-")
+        normal G
+        normal o
     endif
 
-    normal G
-    normal o
-    normal o
 endfunc
 
 
