@@ -358,7 +358,8 @@ function! HideNumber()
 endfunc
 nnoremap <F2> :call HideNumber()<CR>
 " F3 显示可打印字符开关
-nnoremap <F3> :set list! list?<CR>
+"nnoremap <F3> :set list! list?<CR>
+nnoremap <F3> :cs find g <C-R>=expand("<cword>")<CR><CR>
 " F4 换行开关
 nnoremap <F4> :set wrap! wrap?<CR>
 
@@ -690,3 +691,4 @@ highlight clear SpellRare
 highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
+"source ~/.vim/cscope_maps.vim
