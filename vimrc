@@ -597,7 +597,7 @@ autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,pe
 
 
 " 定义函数AutoSetFileHead，自动插入文件头
-autocmd BufNewFile *.sh,*.py,*.cpp,*.c exec ":call AutoSetFileHead()"
+autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
 function! AutoSetFileHead()
     "如果文件类型为.sh文件
     if &filetype == 'sh'
@@ -606,21 +606,6 @@ function! AutoSetFileHead()
         normal o
     endif
     "define the cpp type header
-    if &filetype == 'cpp'
-        call setline(1, "\#include<iostream>")
-        call append(line("."), "\int main() {")
-        call append(line(".")+1, "}")
-        normal j
-        normal o
-    endif
-    if &filetype == 'c'
-        call setline(1, "\#include<stdio>")
-        call append(line("."), "\int main() {")
-        call append(line(".")+1, "}")
-        normal j
-        normal o
-    endif
-    "如果文件类型为python
     if &filetype == 'python'
         " call setline(1, "\#!/usr/bin/env python")
         " call append(1, "\# encoding: utf-8")
