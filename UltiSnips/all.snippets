@@ -1,14 +1,13 @@
 # Global snippets
 snippet Copy
-Copyright (c) ${1:`!v g:snips_author`} <${2:`!v g:snips_email`}>. All Rights Reserved.
-$0
+/*Copyright (c) Wenqi/hnywolf@gmail.com . All Rights Reserved.*/
 endsnippet
 
 snippet comment
 /***********************************************************
-/****Author:Wenchi, Date:${1:`!v strftime("%Y-%m-%d")`}						****
+/****Author:wenqi, Date:${1:`!v strftime("%Y-%m-%d")`}						****
 /****Comment:${1:4} ****
-/***********************************************************
+/***********************************************************/
 endsnippet
 
 snippet date
@@ -72,3 +71,11 @@ endsnippet
 snippet nqa
 # noqa
 endsnippet
+
+snippet gpl
+MODDULE_AUTHOR("Wenchi");
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Test");
+MOULDE_ALIAS("TEST");
+endsnippet
+
