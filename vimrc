@@ -681,4 +681,6 @@ highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 "source ~/.vim/cscope_maps.vim
-
+let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
+let g:UltiSnipsExpandTrigger="<c-j>"
+"let g:UltiSnipsExpandTrigger="<c-j>"
